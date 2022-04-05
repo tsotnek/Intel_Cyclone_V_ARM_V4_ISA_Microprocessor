@@ -1,0 +1,7 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v
+source_file = 1, C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v
+source_file = 1, C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/db/ARMv4ISA_Proccessor.cbx.xml
+design_name = de0_nano_soc_baseline
+instance = comp, \FPGA_CLK_50~input , FPGA_CLK_50~input, de0_nano_soc_baseline, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, de0_nano_soc_baseline, 1

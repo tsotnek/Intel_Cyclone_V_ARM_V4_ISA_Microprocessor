@@ -1,0 +1,51 @@
+|de0_nano_soc_baseline
+FPGA_CLK_50 => FPGA_CLK_50.IN1
+
+
+|de0_nano_soc_baseline|main_module:main_module
+CLK => ~NO_FANOUT~
+
+
+|de0_nano_soc_baseline|main_module:main_module|program_memory:program_memory
+address[0] => ~NO_FANOUT~
+address[1] => ~NO_FANOUT~
+address[2] => ~NO_FANOUT~
+address[3] => ~NO_FANOUT~
+address[4] => ~NO_FANOUT~
+address[5] => ~NO_FANOUT~
+address[6] => ~NO_FANOUT~
+address[7] => ~NO_FANOUT~
+instruction[0] <= <GND>
+instruction[1] <= <GND>
+instruction[2] <= <GND>
+instruction[3] <= <GND>
+instruction[4] <= <GND>
+instruction[5] <= <GND>
+instruction[6] <= <GND>
+instruction[7] <= <GND>
+instruction[8] <= <GND>
+instruction[9] <= <GND>
+instruction[10] <= <GND>
+instruction[11] <= <GND>
+instruction[12] <= <GND>
+instruction[13] <= <GND>
+instruction[14] <= <GND>
+instruction[15] <= <GND>
+instruction[16] <= <GND>
+instruction[17] <= <GND>
+instruction[18] <= <GND>
+instruction[19] <= <GND>
+instruction[20] <= <GND>
+instruction[21] <= <GND>
+instruction[22] <= <GND>
+instruction[23] <= <GND>
+instruction[24] <= <GND>
+instruction[25] <= <GND>
+instruction[26] <= <GND>
+instruction[27] <= <GND>
+instruction[28] <= <GND>
+instruction[29] <= <GND>
+instruction[30] <= <GND>
+instruction[31] <= <GND>
+
+
