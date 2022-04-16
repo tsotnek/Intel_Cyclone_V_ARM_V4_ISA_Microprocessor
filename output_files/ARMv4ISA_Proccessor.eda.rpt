@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ARMv4ISA_Proccessor
-Sun Apr  3 22:56:56 2022
+Sat Apr 16 16:16:52 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                                    ;
 +---------------------------------------+---------------------------------------+
-; EDA Netlist Writer Status             ; Successful - Sun Apr  3 22:56:56 2022 ;
+; EDA Netlist Writer Status             ; Successful - Sat Apr 16 16:16:52 2022 ;
 ; Revision Name                         ; ARMv4ISA_Proccessor                   ;
 ; Top-level Entity Name                 ; de0_nano_soc_baseline                 ;
 ; Family                                ; Cyclone V                             ;
@@ -98,7 +98,6 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Board Signal Integrity                                                                                                                                                                      ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/5csema4_af11_fpga_clk_50_in.sp                                                                                        ;
-;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/drive_select_io.lib                                                                                               ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/cv_ff.inc                                                                                                         ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/lvds_input_load.inc                                                                                               ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/lvds_oct_load.inc                                                                                                 ;
@@ -108,8 +107,6 @@ https://fpgasoftware.intel.com/eula.
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/io_buffer_octrt.inc                                                                                               ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/slew_rate_control.lib                                                                                             ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/io_load.lib                                                                                                       ;
-;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/lvds_preemphasis_select.lib                                                                                       ;
-;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/package.lib                                                                                                       ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/cv_tt.inc                                                                                                         ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/cv_ss.inc                                                                                                         ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/lvds_output_load.inc                                                                                              ;
@@ -117,8 +114,11 @@ https://fpgasoftware.intel.com/eula.
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/io_buffer_octrs.inc                                                                                               ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/io_octrs_calibrated.lib                                                                                           ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/lvds_vod_select.lib                                                                                               ;
+;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/lvds_preemphasis_select.lib                                                                                       ;
+;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/package.lib                                                                                                       ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/io_octrt_calibrated.lib                                                                                           ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/output_delay_control.lib                                                                                          ;
+;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/drive_select_io.lib                                                                                               ;
 ; Board Timing Analysis                                                                                                                                                                       ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/timing/stamp/C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/timing/stamp//ARMv4ISA_Proccessor_6_1100mv_85c_board_slow.mod    ;
 ;     C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/timing/stamp/C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/timing/stamp//ARMv4ISA_Proccessor_6_1100mv_85c_board_slow.data   ;
@@ -141,9 +141,8 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Sun Apr  3 22:56:49 2022
+    Info: Processing started: Sat Apr 16 16:16:50 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ARMv4ISA_Proccessor -c ARMv4ISA_Proccessor
-Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/21.1/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file ARMv4ISA_Proccessor.vo in folder "C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/simulation/modelsim/" for EDA simulation tool
 Info (199047): Generated files "C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/timing/stamp//ARMv4ISA_Proccessor_6_1100mv_85c_board_slow.mod" and "C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/timing/stamp//ARMv4ISA_Proccessor_6_1100mv_85c_board_slow.data"
@@ -154,7 +153,6 @@ Info (199047): Generated files "C:/Users/tsotn/Documents/QUARTUS_Intel_projects_
 Warning (199059): Can't generate files for ViewDraw EDA tool -- device family not supported in ViewDraw Flow
 Info (199053): Generated 22 HSPICE Output files for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/5csema4_af11_fpga_clk_50_in.sp for board level analysis
-    Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/drive_select_io.lib for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/cv_ff.inc for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/lvds_input_load.inc for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/lvds_oct_load.inc for board level analysis
@@ -164,8 +162,6 @@ Info (199053): Generated 22 HSPICE Output files for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/io_buffer_octrt.inc for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/slew_rate_control.lib for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/io_load.lib for board level analysis
-    Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/lvds_preemphasis_select.lib for board level analysis
-    Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/package.lib for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/cv_tt.inc for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/cv_ss.inc for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/lvds_output_load.inc for board level analysis
@@ -173,16 +169,19 @@ Info (199053): Generated 22 HSPICE Output files for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/cir/io_buffer_octrs.inc for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/io_octrs_calibrated.lib for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/lvds_vod_select.lib for board level analysis
+    Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/lvds_preemphasis_select.lib for board level analysis
+    Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/package.lib for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/io_octrt_calibrated.lib for board level analysis
     Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/output_delay_control.lib for board level analysis
+    Info (199051): Generated HSPICE Output File C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/hspice/lib/drive_select_io.lib for board level analysis
 Info: TOTAL BSCAN REGISTERS IS 399
 Info: TOTAL IO PAD COUNT IS 379
 Info: CYCLONE_V_5CSEMA4U23 has 333 JTAG SEQUENCE AVAILABLE
 Info (199065): Generated Boundary-Scan Description Language output file C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/board/bsd/5CSEMA4U23C6_pre.bsd for board-level analysis
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4758 megabytes
-    Info: Processing ended: Sun Apr  3 22:56:56 2022
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4755 megabytes
+    Info: Processing ended: Sat Apr 16 16:16:52 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

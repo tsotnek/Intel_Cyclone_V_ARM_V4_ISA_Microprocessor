@@ -23,7 +23,7 @@ MODEL
 */
 MODEL_VERSION "1.0";
 DESIGN "ARMv4ISA_Proccessor";
-DATE "04/03/2022 22:56:51";
+DATE "04/16/2022 16:16:51";
 PROGRAM "Quartus Prime";
 
 

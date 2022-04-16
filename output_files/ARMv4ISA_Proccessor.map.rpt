@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ARMv4ISA_Proccessor
-Sun Apr  3 23:12:59 2022
+Sat Apr 16 16:16:30 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "main_module:main_module|program_memory:program_memory"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: main_module:main_module
+ 10. Port Connectivity Checks: "main_module:main_module|program_memory:program_memory"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr  3 23:12:59 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sat Apr 16 16:16:30 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; ARMv4ISA_Proccessor                         ;
 ; Top-level Entity Name           ; de0_nano_soc_baseline                       ;
@@ -175,6 +176,7 @@ https://fpgasoftware.intel.com/eula.
 ; de0_nano_soc_baseline.v          ; yes             ; User Verilog HDL File  ; C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v    ;         ;
 ; ARMv4ISA_Proccessor_MAIN.v       ; yes             ; User Verilog HDL File  ; C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v ;         ;
 ; program_memory.v                 ; yes             ; User Verilog HDL File  ; C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v           ;         ;
+; program_counter.v                ; yes             ; User Verilog HDL File  ; C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v          ;         ;
 ; instr.txt                        ; yes             ; Auto-Found File        ; C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/instr.txt                  ;         ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 
@@ -231,6 +233,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_module:main_module ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; RESET_STATE    ; 00    ; Unsigned Binary                             ;
+; FETCH_STATE    ; 01    ; Unsigned Binary                             ;
+; DECODE_STATE   ; 10    ; Unsigned Binary                             ;
+; EXEC_STATE     ; 11    ; Unsigned Binary                             ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "main_module:main_module|program_memory:program_memory"                                     ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -267,9 +282,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Sun Apr  3 23:12:47 2022
+    Info: Processing started: Sat Apr 16 16:16:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ARMv4ISA_Proccessor -c ARMv4ISA_Proccessor
-Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/21.1/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file de0_nano_soc_baseline.v
@@ -277,15 +291,71 @@ Info (12021): Found 1 design units, including 1 entities, in source file de0_nan
 Info (12021): Found 1 design units, including 1 entities, in source file armv4isa_proccessor_main.v
     Info (12023): Found entity 1: main_module File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file program_memory.v
-    Info (12023): Found entity 1: program_memory File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 1
+    Info (12023): Found entity 1: program_memory File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file program_counter.v
+    Info (12023): Found entity 1: program_counter File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
+    Info (12023): Found entity 1: testbench File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v Line: 1
 Info (12127): Elaborating entity "de0_nano_soc_baseline" for the top level hierarchy
 Info (12128): Elaborating entity "main_module" for hierarchy "main_module:main_module" File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v Line: 47
-Info (12128): Elaborating entity "program_memory" for hierarchy "main_module:main_module|program_memory:program_memory" File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 14
-Warning (10036): Verilog HDL or VHDL warning at program_memory.v(8): object "instrmem" assigned a value but never read File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 8
-Warning (10850): Verilog HDL warning at program_memory.v(13): number of words (0) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 13
-Warning (10855): Verilog HDL warning at program_memory.v(12): initial value for variable instrmem should be constant File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 12
-Warning (10034): Output port "instruction" at program_memory.v(4) has no driver File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 4
-Warning (12158): Entity "program_memory" contains only dangling pins File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 14
+Warning (10235): Verilog HDL Always Construct warning at ARMv4ISA_Proccessor_MAIN.v(40): variable "opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 40
+Warning (10235): Verilog HDL Always Construct warning at ARMv4ISA_Proccessor_MAIN.v(43): variable "opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 43
+Warning (10230): Verilog HDL assignment warning at ARMv4ISA_Proccessor_MAIN.v(43): truncated value with size 32 to match size of target (2) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 43
+Warning (10240): Verilog HDL Always Construct warning at ARMv4ISA_Proccessor_MAIN.v(48): inferring latch(es) for variable "program_increment_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 48
+Warning (10240): Verilog HDL Always Construct warning at ARMv4ISA_Proccessor_MAIN.v(48): inferring latch(es) for variable "program_signal", which holds its previous value in one or more paths through the always construct File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 48
+Info (10041): Inferred latch for "program_signal" at ARMv4ISA_Proccessor_MAIN.v(48) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 48
+Info (10041): Inferred latch for "program_increment_flag" at ARMv4ISA_Proccessor_MAIN.v(48) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 48
+Info (12128): Elaborating entity "program_counter" for hierarchy "main_module:main_module|program_counter:program_counter" File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at program_counter.v(14): variable "increment_flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 14
+Warning (10235): Verilog HDL Always Construct warning at program_counter.v(15): variable "program_counter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 15
+Warning (10230): Verilog HDL assignment warning at program_counter.v(15): truncated value with size 32 to match size of target (8) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at program_counter.v(12): inferring latch(es) for variable "program_counter", which holds its previous value in one or more paths through the always construct File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (10041): Inferred latch for "program_counter[0]" at program_counter.v(12) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (10041): Inferred latch for "program_counter[1]" at program_counter.v(12) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (10041): Inferred latch for "program_counter[2]" at program_counter.v(12) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (10041): Inferred latch for "program_counter[3]" at program_counter.v(12) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (10041): Inferred latch for "program_counter[4]" at program_counter.v(12) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (10041): Inferred latch for "program_counter[5]" at program_counter.v(12) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (10041): Inferred latch for "program_counter[6]" at program_counter.v(12) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (10041): Inferred latch for "program_counter[7]" at program_counter.v(12) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v Line: 12
+Info (12128): Elaborating entity "program_memory" for hierarchy "main_module:main_module|program_memory:program_memory" File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v Line: 35
+Warning (10850): Verilog HDL warning at program_memory.v(17): number of words (3) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at program_memory.v(22): inferring latch(es) for variable "instruction", which holds its previous value in one or more paths through the always construct File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Warning (10030): Net "instrmem.data_a" at program_memory.v(11) has no driver or initial value, using a default initial value '0' File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 11
+Warning (10030): Net "instrmem.waddr_a" at program_memory.v(11) has no driver or initial value, using a default initial value '0' File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 11
+Warning (10030): Net "instrmem.we_a" at program_memory.v(11) has no driver or initial value, using a default initial value '0' File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 11
+Info (10041): Inferred latch for "instruction[0]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[1]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[2]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[3]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[4]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[5]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[6]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[7]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[8]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[9]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[10]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[11]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[12]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[13]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[14]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[15]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[16]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[17]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[18]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[19]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[20]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[21]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[22]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[23]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[24]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[25]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[26]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[27]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[28]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[29]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[30]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
+Info (10041): Inferred latch for "instruction[31]" at program_memory.v(22) File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 22
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
@@ -293,10 +363,10 @@ Warning (21074): Design contains 1 input pin(s) that do not drive logic
 Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
     Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Sun Apr  3 23:12:59 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Sat Apr 16 16:16:30 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 
