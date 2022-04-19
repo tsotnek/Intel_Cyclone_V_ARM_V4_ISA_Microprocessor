@@ -1,8 +1,7 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 module main_module(
 	input CLK
 );
-
 
 //state machine
 parameter RESET_STATE  = 2'b00,
@@ -27,15 +26,14 @@ program_counter program_counter(.CLK(CLK),
 
 //Program memory
 reg program_signal;
-reg [7:0]  program_instruction_address;
 wire [31:0] program_instruction;
-program_memory program_memory(.program_increment(program_signal), 
-										.address(program_instruction_address),
+program_memory program_memory(.CLK(CLK),
+										.program_increment(program_signal), 
 										.program_counter(program_counter_reg),
 										.instruction(program_instruction));
 //Initially we have to read programe instructions from .txt file into program memory
 
-always @(CLK)
+always @(posedge CLK)
 	begin
 	if(opcode==EXEC_STATE)
 		opcode<=RESET_STATE;
@@ -57,15 +55,18 @@ always @ (*)
 			FETCH_STATE:
 				begin
 					program_signal<=1;
+					program_increment_flag<=1;
 				end
 				
 			DECODE_STATE:
 				begin
+					program_increment_flag<=0;
+					program_signal<=0;
 				end
 				
 			EXEC_STATE:
 				begin
-					program_increment_flag<=1;
+					
 				end
 				
 		endcase

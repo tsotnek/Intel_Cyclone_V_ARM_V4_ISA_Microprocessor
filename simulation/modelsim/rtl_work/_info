@@ -1,0 +1,126 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  3 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/simulation/modelsim
+vde0_nano_soc_baseline
+Z1 !s110 1650190312
+!i10b 1
+!s100 :0gI0IUlWGV2QcH;VnmHH0
+I0<DUSEXWXM^75i?ICzGke1
+R0
+w1650137036
+8C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v
+FC:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v
+!i122 20
+L0 40 11
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z4 !s108 1650190312.000000
+!s107 C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA|C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA
+Z7 tCvgOpt 0
+vmain_module
+R1
+!i10b 1
+!s100 hFjSL>fTT7E2FE4Xc>?]E3
+IFg:mLM53DTM3n3ob88h0_1
+R0
+w1650190160
+8C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v
+FC:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v
+!i122 21
+L0 2 73
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA|C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v|
+!i113 1
+R5
+R6
+R7
+vprogram_counter
+R1
+!i10b 1
+!s100 fA54m_?HAzJA>4ZA`EnST2
+I14MC20cfcK[50WOCDzgle1
+R0
+w1650137199
+8C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v
+FC:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v
+!i122 22
+L0 3 20
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA|C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v|
+!i113 1
+R5
+R6
+R7
+vprogram_memory
+R1
+!i10b 1
+!s100 @fX]oWUIP`T^J2`NOl:A]0
+I]fOPO<Vg;Gcd7cXB=EFfe0
+R0
+w1650190303
+8C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v
+FC:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v
+!i122 23
+L0 2 28
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA|C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v|
+!i113 1
+R5
+R6
+R7
+vtestbench
+!s110 1650190405
+!i10b 1
+!s100 @9^oaRahY=E3iMoUYRVaW1
+IdfC^Y5ZKIeK_fMfGn=6l83
+R0
+w1650190396
+8C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v
+FC:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v
+!i122 25
+L0 2 19
+R2
+R3
+r1
+!s85 0
+31
+!s108 1650190405.000000
+!s107 C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA|C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v|
+!i113 1
+R5
+R6
+R7

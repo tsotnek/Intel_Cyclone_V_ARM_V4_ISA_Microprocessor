@@ -1,3 +1,5 @@
+`timescale 1ns / 1ns
+
 module program_counter(
 	input CLK,
 	input increment_flag,
@@ -9,7 +11,7 @@ begin
 program_counter <= 0;
 end
 
-always @ (CLK)
+always @ (posedge CLK)
 	begin
 		if(increment_flag)
 			program_counter <= program_counter + 1;

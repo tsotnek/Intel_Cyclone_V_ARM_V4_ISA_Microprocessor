@@ -1,72 +1,75 @@
-|de0_nano_soc_baseline
+|testbench
+
+
+|testbench|de0_nano_soc_baseline:de0_nano_soc_baseline
 FPGA_CLK_50 => FPGA_CLK_50.IN1
 
 
-|de0_nano_soc_baseline|main_module:main_module
-CLK => CLK.IN1
+|testbench|de0_nano_soc_baseline:de0_nano_soc_baseline|main_module:main_module
+CLK => CLK.IN2
 
 
-|de0_nano_soc_baseline|main_module:main_module|program_counter:program_counter
+|testbench|de0_nano_soc_baseline:de0_nano_soc_baseline|main_module:main_module|program_counter:program_counter
+CLK => program_counter[0]~reg0.CLK
+CLK => program_counter[1]~reg0.CLK
+CLK => program_counter[2]~reg0.CLK
+CLK => program_counter[3]~reg0.CLK
+CLK => program_counter[4]~reg0.CLK
+CLK => program_counter[5]~reg0.CLK
+CLK => program_counter[6]~reg0.CLK
+CLK => program_counter[7]~reg0.CLK
+increment_flag => program_counter[0]~reg0.ENA
+increment_flag => program_counter[1]~reg0.ENA
+increment_flag => program_counter[2]~reg0.ENA
+increment_flag => program_counter[3]~reg0.ENA
+increment_flag => program_counter[4]~reg0.ENA
+increment_flag => program_counter[5]~reg0.ENA
+increment_flag => program_counter[6]~reg0.ENA
+increment_flag => program_counter[7]~reg0.ENA
+program_counter[0] <= program_counter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+program_counter[1] <= program_counter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+program_counter[2] <= program_counter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+program_counter[3] <= program_counter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+program_counter[4] <= program_counter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+program_counter[5] <= program_counter[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+program_counter[6] <= program_counter[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+program_counter[7] <= program_counter[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testbench|de0_nano_soc_baseline:de0_nano_soc_baseline|main_module:main_module|program_memory:program_memory
 CLK => ~NO_FANOUT~
-increment_flag => program_counter[0]$latch.LATCH_ENABLE
-increment_flag => program_counter[1]$latch.LATCH_ENABLE
-increment_flag => program_counter[2]$latch.LATCH_ENABLE
-increment_flag => program_counter[3]$latch.LATCH_ENABLE
-increment_flag => program_counter[4]$latch.LATCH_ENABLE
-increment_flag => program_counter[5]$latch.LATCH_ENABLE
-increment_flag => program_counter[6]$latch.LATCH_ENABLE
-increment_flag => program_counter[7]$latch.LATCH_ENABLE
-program_counter[0] <= program_counter[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-program_counter[1] <= program_counter[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-program_counter[2] <= program_counter[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-program_counter[3] <= program_counter[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-program_counter[4] <= program_counter[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-program_counter[5] <= program_counter[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-program_counter[6] <= program_counter[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-program_counter[7] <= program_counter[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|de0_nano_soc_baseline|main_module:main_module|program_memory:program_memory
-program_increment => instruction[0]$latch.LATCH_ENABLE
-program_increment => instruction[1]$latch.LATCH_ENABLE
-program_increment => instruction[2]$latch.LATCH_ENABLE
-program_increment => instruction[3]$latch.LATCH_ENABLE
-program_increment => instruction[4]$latch.LATCH_ENABLE
-program_increment => instruction[5]$latch.LATCH_ENABLE
-program_increment => instruction[6]$latch.LATCH_ENABLE
-program_increment => instruction[7]$latch.LATCH_ENABLE
-program_increment => instruction[8]$latch.LATCH_ENABLE
-program_increment => instruction[9]$latch.LATCH_ENABLE
-program_increment => instruction[10]$latch.LATCH_ENABLE
-program_increment => instruction[11]$latch.LATCH_ENABLE
-program_increment => instruction[12]$latch.LATCH_ENABLE
-program_increment => instruction[13]$latch.LATCH_ENABLE
-program_increment => instruction[14]$latch.LATCH_ENABLE
-program_increment => instruction[15]$latch.LATCH_ENABLE
-program_increment => instruction[16]$latch.LATCH_ENABLE
-program_increment => instruction[17]$latch.LATCH_ENABLE
-program_increment => instruction[18]$latch.LATCH_ENABLE
-program_increment => instruction[19]$latch.LATCH_ENABLE
-program_increment => instruction[20]$latch.LATCH_ENABLE
-program_increment => instruction[21]$latch.LATCH_ENABLE
-program_increment => instruction[22]$latch.LATCH_ENABLE
-program_increment => instruction[23]$latch.LATCH_ENABLE
-program_increment => instruction[24]$latch.LATCH_ENABLE
-program_increment => instruction[25]$latch.LATCH_ENABLE
-program_increment => instruction[26]$latch.LATCH_ENABLE
-program_increment => instruction[27]$latch.LATCH_ENABLE
-program_increment => instruction[28]$latch.LATCH_ENABLE
-program_increment => instruction[29]$latch.LATCH_ENABLE
-program_increment => instruction[30]$latch.LATCH_ENABLE
-program_increment => instruction[31]$latch.LATCH_ENABLE
-address[0] => ~NO_FANOUT~
-address[1] => ~NO_FANOUT~
-address[2] => ~NO_FANOUT~
-address[3] => ~NO_FANOUT~
-address[4] => ~NO_FANOUT~
-address[5] => ~NO_FANOUT~
-address[6] => ~NO_FANOUT~
-address[7] => ~NO_FANOUT~
+program_increment => outinstruction[0].LATCH_ENABLE
+program_increment => outinstruction[1].LATCH_ENABLE
+program_increment => outinstruction[2].LATCH_ENABLE
+program_increment => outinstruction[3].LATCH_ENABLE
+program_increment => outinstruction[4].LATCH_ENABLE
+program_increment => outinstruction[5].LATCH_ENABLE
+program_increment => outinstruction[6].LATCH_ENABLE
+program_increment => outinstruction[7].LATCH_ENABLE
+program_increment => outinstruction[8].LATCH_ENABLE
+program_increment => outinstruction[9].LATCH_ENABLE
+program_increment => outinstruction[10].LATCH_ENABLE
+program_increment => outinstruction[11].LATCH_ENABLE
+program_increment => outinstruction[12].LATCH_ENABLE
+program_increment => outinstruction[13].LATCH_ENABLE
+program_increment => outinstruction[14].LATCH_ENABLE
+program_increment => outinstruction[15].LATCH_ENABLE
+program_increment => outinstruction[16].LATCH_ENABLE
+program_increment => outinstruction[17].LATCH_ENABLE
+program_increment => outinstruction[18].LATCH_ENABLE
+program_increment => outinstruction[19].LATCH_ENABLE
+program_increment => outinstruction[20].LATCH_ENABLE
+program_increment => outinstruction[21].LATCH_ENABLE
+program_increment => outinstruction[22].LATCH_ENABLE
+program_increment => outinstruction[23].LATCH_ENABLE
+program_increment => outinstruction[24].LATCH_ENABLE
+program_increment => outinstruction[25].LATCH_ENABLE
+program_increment => outinstruction[26].LATCH_ENABLE
+program_increment => outinstruction[27].LATCH_ENABLE
+program_increment => outinstruction[28].LATCH_ENABLE
+program_increment => outinstruction[29].LATCH_ENABLE
+program_increment => outinstruction[30].LATCH_ENABLE
+program_increment => outinstruction[31].LATCH_ENABLE
 program_counter[0] => instrmem.RADDR
 program_counter[1] => instrmem.RADDR1
 program_counter[2] => instrmem.RADDR2
@@ -74,38 +77,38 @@ program_counter[3] => instrmem.RADDR3
 program_counter[4] => instrmem.RADDR4
 program_counter[5] => instrmem.RADDR5
 program_counter[6] => instrmem.RADDR6
-program_counter[7] => instrmem.RADDR7
-instruction[0] <= instruction[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[1] <= instruction[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[2] <= instruction[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[3] <= instruction[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[4] <= instruction[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[5] <= instruction[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[6] <= instruction[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[7] <= instruction[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[8] <= instruction[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[9] <= instruction[9]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[10] <= instruction[10]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[11] <= instruction[11]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[12] <= instruction[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[13] <= instruction[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[14] <= instruction[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[15] <= instruction[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[16] <= instruction[16]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[17] <= instruction[17]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[18] <= instruction[18]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[19] <= instruction[19]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[20] <= instruction[20]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[21] <= instruction[21]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[22] <= instruction[22]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[23] <= instruction[23]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[24] <= instruction[24]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[25] <= instruction[25]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[26] <= instruction[26]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[27] <= instruction[27]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[28] <= instruction[28]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[29] <= instruction[29]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[30] <= instruction[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
-instruction[31] <= instruction[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
+program_counter[7] => ~NO_FANOUT~
+instruction[0] <= outinstruction[0].DB_MAX_OUTPUT_PORT_TYPE
+instruction[1] <= outinstruction[1].DB_MAX_OUTPUT_PORT_TYPE
+instruction[2] <= outinstruction[2].DB_MAX_OUTPUT_PORT_TYPE
+instruction[3] <= outinstruction[3].DB_MAX_OUTPUT_PORT_TYPE
+instruction[4] <= outinstruction[4].DB_MAX_OUTPUT_PORT_TYPE
+instruction[5] <= outinstruction[5].DB_MAX_OUTPUT_PORT_TYPE
+instruction[6] <= outinstruction[6].DB_MAX_OUTPUT_PORT_TYPE
+instruction[7] <= outinstruction[7].DB_MAX_OUTPUT_PORT_TYPE
+instruction[8] <= outinstruction[8].DB_MAX_OUTPUT_PORT_TYPE
+instruction[9] <= outinstruction[9].DB_MAX_OUTPUT_PORT_TYPE
+instruction[10] <= outinstruction[10].DB_MAX_OUTPUT_PORT_TYPE
+instruction[11] <= outinstruction[11].DB_MAX_OUTPUT_PORT_TYPE
+instruction[12] <= outinstruction[12].DB_MAX_OUTPUT_PORT_TYPE
+instruction[13] <= outinstruction[13].DB_MAX_OUTPUT_PORT_TYPE
+instruction[14] <= outinstruction[14].DB_MAX_OUTPUT_PORT_TYPE
+instruction[15] <= outinstruction[15].DB_MAX_OUTPUT_PORT_TYPE
+instruction[16] <= outinstruction[16].DB_MAX_OUTPUT_PORT_TYPE
+instruction[17] <= outinstruction[17].DB_MAX_OUTPUT_PORT_TYPE
+instruction[18] <= outinstruction[18].DB_MAX_OUTPUT_PORT_TYPE
+instruction[19] <= outinstruction[19].DB_MAX_OUTPUT_PORT_TYPE
+instruction[20] <= outinstruction[20].DB_MAX_OUTPUT_PORT_TYPE
+instruction[21] <= outinstruction[21].DB_MAX_OUTPUT_PORT_TYPE
+instruction[22] <= outinstruction[22].DB_MAX_OUTPUT_PORT_TYPE
+instruction[23] <= outinstruction[23].DB_MAX_OUTPUT_PORT_TYPE
+instruction[24] <= outinstruction[24].DB_MAX_OUTPUT_PORT_TYPE
+instruction[25] <= outinstruction[25].DB_MAX_OUTPUT_PORT_TYPE
+instruction[26] <= outinstruction[26].DB_MAX_OUTPUT_PORT_TYPE
+instruction[27] <= outinstruction[27].DB_MAX_OUTPUT_PORT_TYPE
+instruction[28] <= outinstruction[28].DB_MAX_OUTPUT_PORT_TYPE
+instruction[29] <= outinstruction[29].DB_MAX_OUTPUT_PORT_TYPE
+instruction[30] <= outinstruction[30].DB_MAX_OUTPUT_PORT_TYPE
+instruction[31] <= outinstruction[31].DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -36,7 +36,7 @@
 //`define enable_GPIO0
 //`define enable_GPIO1
 //`define enable_HPS
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 module de0_nano_soc_baseline(
 
 	//////////// CLOCK /////////
@@ -44,7 +44,7 @@ module de0_nano_soc_baseline(
 
 );
 
-main_module main_module(FPGA_CLK_50);
+main_module main_module(.CLK(FPGA_CLK_50));
 
 
 endmodule

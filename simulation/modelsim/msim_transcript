@@ -1,0 +1,441 @@
+# Reading pref.tcl
+# do ARMv4ISA_Proccessor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2021.1 Lib Mapping Utility 2021.02 Feb  3 2021
+# vmap work rtl_work 
+# Copying C:/intelFPGA_pro/21.2/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA {C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:06:26 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v 
+# -- Compiling module de0_nano_soc_baseline
+# 
+# Top level modules:
+# 	de0_nano_soc_baseline
+# End time: 14:06:26 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA {C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:06:27 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 14:06:27 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA {C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:06:27 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:06:27 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA {C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:06:27 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v 
+# -- Compiling module main_module
+# 
+# Top level modules:
+# 	main_module
+# End time: 14:06:27 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA {C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:06:27 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v 
+# -- Compiling module program_memory
+# 
+# Top level modules:
+# 	program_memory
+# End time: 14:06:27 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 14:06:34 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/instrmememory
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: tsotn  Hostname: TSOTNEK-PC  ProcessID: 9272
+#           Attempting to use alternate WLF file "./wlftkmhj54".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkmhj54
+run
+# ** Warning: (vsim-7) Failed to open readmem file "instr.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v(17)
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/de0_nano_soc_baseline/main_module/program_memory
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:08:25 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v 
+# -- Compiling module de0_nano_soc_baseline
+# 
+# Top level modules:
+# 	de0_nano_soc_baseline
+# End time: 14:08:25 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:08:25 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v 
+# -- Compiling module main_module
+# 
+# Top level modules:
+# 	main_module
+# End time: 14:08:25 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:08:25 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 14:08:25 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:08:25 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v 
+# -- Compiling module program_memory
+# 
+# Top level modules:
+# 	program_memory
+# End time: 14:08:25 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:08:25 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:08:25 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# End time: 14:08:32 on Apr 17,2022, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 3
+# vsim work.testbench 
+# Start time: 14:08:32 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+# ** Error: (vsim-3043) Unresolved reference to 'instrmememory'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/de0_nano_soc_baseline/main_module/program_memory File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 17
+# Error loading design
+# End time: 14:08:33 on Apr 17,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:02 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v 
+# -- Compiling module de0_nano_soc_baseline
+# 
+# Top level modules:
+# 	de0_nano_soc_baseline
+# End time: 14:09:02 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:02 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v 
+# -- Compiling module main_module
+# 
+# Top level modules:
+# 	main_module
+# End time: 14:09:02 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:02 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 14:09:02 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:02 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v 
+# -- Compiling module program_memory
+# 
+# Top level modules:
+# 	program_memory
+# End time: 14:09:02 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:02 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:09:02 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 14:09:06 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+# ** Error: (vsim-3043) Unresolved reference to 'instrmememory'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/de0_nano_soc_baseline/main_module/program_memory File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 17
+# Error loading design
+vsim work.testbench
+# End time: 14:09:07 on Apr 17,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# vsim work.testbench 
+# Start time: 14:09:07 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+# ** Error: (vsim-3043) Unresolved reference to 'instrmememory'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/de0_nano_soc_baseline/main_module/program_memory File: C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v Line: 17
+# Error loading design
+# End time: 14:09:07 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:49 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v 
+# -- Compiling module de0_nano_soc_baseline
+# 
+# Top level modules:
+# 	de0_nano_soc_baseline
+# End time: 14:09:49 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:49 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v 
+# -- Compiling module main_module
+# 
+# Top level modules:
+# 	main_module
+# End time: 14:09:49 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:50 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 14:09:50 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:50 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v 
+# -- Compiling module program_memory
+# 
+# Top level modules:
+# 	program_memory
+# End time: 14:09:50 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:09:50 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:09:50 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 14:09:54 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+vsim work.testbench
+# End time: 14:09:56 on Apr 17,2022, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 14:09:56 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+vsim work.testbench
+# End time: 14:09:58 on Apr 17,2022, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 14:09:58 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/CLK
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/opcode
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_increment_flag
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_counter_reg
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_signal
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_instruction
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: tsotn  Hostname: TSOTNEK-PC  ProcessID: 9272
+#           Attempting to use alternate WLF file "./wlftcm559c".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcm559c
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:11:52 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/de0_nano_soc_baseline.v 
+# -- Compiling module de0_nano_soc_baseline
+# 
+# Top level modules:
+# 	de0_nano_soc_baseline
+# End time: 14:11:52 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:11:52 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/ARMv4ISA_Proccessor_MAIN.v 
+# -- Compiling module main_module
+# 
+# Top level modules:
+# 	main_module
+# End time: 14:11:52 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:11:52 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_counter.v 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 14:11:52 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:11:52 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/program_memory.v 
+# -- Compiling module program_memory
+# 
+# Top level modules:
+# 	program_memory
+# End time: 14:11:52 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:11:52 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:11:52 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# End time: 14:11:58 on Apr 17,2022, Elapsed time: 0:02:00
+# Errors: 0, Warnings: 2
+# vsim work.testbench 
+# Start time: 14:11:58 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/CLK
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/opcode
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_increment_flag
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_counter_reg
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_signal
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_instruction
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: tsotn  Hostname: TSOTNEK-PC  ProcessID: 9272
+#           Attempting to use alternate WLF file "./wlftfsdkh3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfsdkh3
+run
+vsim work.testbench
+# End time: 14:12:40 on Apr 17,2022, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 2
+# vsim work.testbench 
+# Start time: 14:12:40 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+vlog -vlog01compat -work work +incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+# Start time: 14:13:25 on Apr 17,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA" C:/Users/tsotn/Documents/QUARTUS_Intel_projects_FPGA/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:13:25 on Apr 17,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# End time: 14:13:32 on Apr 17,2022, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 14:13:32 on Apr 17,2022
+# Loading work.testbench
+# Loading work.de0_nano_soc_baseline
+# Loading work.main_module
+# Loading work.program_counter
+# Loading work.program_memory
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/CLK
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/opcode
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_increment_flag
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_counter_reg
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_signal
+add wave -position end  sim:/testbench/de0_nano_soc_baseline/main_module/program_instruction
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: tsotn  Hostname: TSOTNEK-PC  ProcessID: 9272
+#           Attempting to use alternate WLF file "./wlftt9cws1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftt9cws1
+run
+run
+run
+# End time: 14:15:09 on Apr 17,2022, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 2
